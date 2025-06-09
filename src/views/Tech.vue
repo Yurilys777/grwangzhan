@@ -371,4 +371,33 @@ onMounted(() => {
   right: -15vw;
   top: 0;
 }
+
+/* 添加媒体查询，优化移动端显示 */
+@media (max-width: 768px) {
+  .spotlight {
+    width: 20vw; /* 减小聚光灯宽度 */
+  }
+  
+  .spotlight-left {
+    left: -10vw; /* 调整左侧聚光灯位置 */
+  }
+  
+  .spotlight-right {
+    right: -10vw; /* 调整右侧聚光灯位置 */
+  }
+}
+
+/* 小屏幕设备进一步优化 */
+@media (max-width: 480px) {
+  .spotlight {
+    display: none; /* 在小屏幕设备上完全隐藏聚光灯效果 */
+  }
+}
+
+/* 确保页面容器不会溢出 */
+.container {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
 </style>

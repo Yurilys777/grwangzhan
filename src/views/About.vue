@@ -174,11 +174,11 @@
               <div class="relative pl-8">
                 <div class="absolute w-4 h-4 bg-indigo-500 rounded-full -left-2 mt-1"></div>
                 <div class="flex items-center justify-between">
-                  <h3 class="text-lg font-semibold">前端开发实习生</h3>
-                  <span class="text-xs text-gray-400">2025 - 2025</span>
+                  <h3 class="text-lg font-semibold">学校小程序开发实习生</h3>
+                  <span class="text-xs text-gray-400">2024 - 2024</span>
                 </div>
                 <p class="text-indigo-400 text-sm mb-2">创新科技初创公司</p>
-                <p class="text-gray-400 text-sm">参与公司官网和内部管理系统的前端开发，学习和应用前端技术栈，快速成长为团队核心成员。</p>
+                <p class="text-gray-400 text-sm">参与学校小程序和官网的前端开发，学习和应用前端技术栈，快速成长为团队核心成员。</p>
               </div>
             </div>
           </div>
@@ -204,6 +204,77 @@
                 </div>
                 <p class="text-indigo-400 text-sm mb-2">xx大学</p>
                 <p class="text-gray-400 text-sm">研究方向：Web前端技术与用户体验设计；主修课程：数据结构、算法设计、软件工程、数据库系统、计算机网络</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 项目经验 -->
+        <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 mb-12">
+          <h2 class="text-2xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-500">项目经验</h2>
+          
+          <div class="space-y-8">
+            <!-- 智能OA系统 -->
+            <div class="border-l-4 border-indigo-500 pl-5 py-2">
+              <div class="flex items-center justify-between mb-2">
+                <h3 class="text-xl font-semibold">智能OA系统</h3>
+                <span class="text-xs bg-indigo-500/20 text-indigo-300 px-3 py-1 rounded-full">全栈开发</span>
+              </div>
+              <p class="text-indigo-400 text-sm mb-3">多端协同办公平台（小程序、PC端、移动端）</p>
+              <p class="text-gray-400 text-sm mb-3">开发了一套完整的智能办公自动化系统，实现了多端协同工作。系统具备自动办理营业执照、身份证等证件的功能，大幅提升了办公效率。</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="text-xs bg-gray-700/50 text-gray-300 px-2 py-1 rounded">Vue.js</span>
+                <span class="text-xs bg-gray-700/50 text-gray-300 px-2 py-1 rounded">微信小程序</span>
+                <span class="text-xs bg-gray-700/50 text-gray-300 px-2 py-1 rounded">自动化流程</span>
+                <span class="text-xs bg-gray-700/50 text-gray-300 px-2 py-1 rounded">响应式设计</span>
+              </div>
+            </div>
+            
+            <!-- 点餐小程序 -->
+            <div class="border-l-4 border-purple-500 pl-5 py-2">
+              <div class="flex items-center justify-between mb-2">
+                <h3 class="text-xl font-semibold">点餐小程序系列</h3>
+                <span class="text-xs bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full">UI/UX + 前端</span>
+              </div>
+              <p class="text-purple-400 text-sm mb-3">餐饮行业定制化解决方案</p>
+              <p class="text-gray-400 text-sm mb-3">设计并开发了多款点餐小程序，为不同类型的餐饮商户提供定制化解决方案。负责UI设计与前端实现，打造了流畅的用户体验和精美的视觉效果。</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="text-xs bg-gray-700/50 text-gray-300 px-2 py-1 rounded">UI设计</span>
+                <span class="text-xs bg-gray-700/50 text-gray-300 px-2 py-1 rounded">微信小程序</span>
+                <span class="text-xs bg-gray-700/50 text-gray-300 px-2 py-1 rounded">支付接口</span>
+                <span class="text-xs bg-gray-700/50 text-gray-300 px-2 py-1 rounded">用户体验</span>
+              </div>
+            </div>
+            
+            <!-- 小智AI智能耳机 -->
+            <div class="border-l-4 border-blue-500 pl-5 py-2">
+              <div class="flex items-center justify-between mb-2">
+                <h3 class="text-xl font-semibold">小智AI智能耳机</h3>
+                <span class="text-xs bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full">AI应用开发</span>
+              </div>
+              <p class="text-blue-400 text-sm mb-3">智能语音交互与实时翻译系统</p>
+              <p class="text-gray-400 text-sm mb-3">参与开发了智能耳机配套的应用程序，实现了实时语音翻译、智能对话等功能。通过AI技术提升了用户的沟通体验，解决了跨语言交流的障碍。</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="text-xs bg-gray-700/50 text-gray-300 px-2 py-1 rounded">AI集成</span>
+                <span class="text-xs bg-gray-700/50 text-gray-300 px-2 py-1 rounded">语音识别</span>
+                <span class="text-xs bg-gray-700/50 text-gray-300 px-2 py-1 rounded">实时翻译</span>
+                <span class="text-xs bg-gray-700/50 text-gray-300 px-2 py-1 rounded">蓝牙通信</span>
+              </div>
+            </div>
+            
+            <!-- 公司官网项目 -->
+            <div class="border-l-4 border-green-500 pl-5 py-2">
+              <div class="flex items-center justify-between mb-2">
+                <h3 class="text-xl font-semibold">企业官网系列</h3>
+                <span class="text-xs bg-green-500/20 text-green-300 px-3 py-1 rounded-full">前端开发</span>
+              </div>
+              <p class="text-green-400 text-sm mb-3">多行业企业形象展示平台</p>
+              <p class="text-gray-400 text-sm mb-3">为多家企业设计并开发了现代化的官方网站，涵盖不同行业和领域。注重响应式设计和性能优化，确保在各种设备上都能提供出色的浏览体验。</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="text-xs bg-gray-700/50 text-gray-300 px-2 py-1 rounded">响应式设计</span>
+                <span class="text-xs bg-gray-700/50 text-gray-300 px-2 py-1 rounded">SEO优化</span>
+                <span class="text-xs bg-gray-700/50 text-gray-300 px-2 py-1 rounded">动效设计</span>
+                <span class="text-xs bg-gray-700/50 text-gray-300 px-2 py-1 rounded">性能优化</span>
               </div>
             </div>
           </div>
@@ -294,5 +365,34 @@ onMounted(() => {
 .spotlight-right {
   right: -15vw;
   top: 0;
+}
+
+/* 添加媒体查询，优化移动端显示 */
+@media (max-width: 768px) {
+  .spotlight {
+    width: 20vw; /* 减小聚光灯宽度 */
+  }
+  
+  .spotlight-left {
+    left: -10vw; /* 调整左侧聚光灯位置 */
+  }
+  
+  .spotlight-right {
+    right: -10vw; /* 调整右侧聚光灯位置 */
+  }
+}
+
+/* 小屏幕设备进一步优化 */
+@media (max-width: 480px) {
+  .spotlight {
+    display: none; /* 在小屏幕设备上完全隐藏聚光灯效果 */
+  }
+}
+
+/* 确保页面容器不会溢出 */
+.container {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
 }
 </style> 
