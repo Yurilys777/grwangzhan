@@ -143,21 +143,21 @@ const messageForm = reactive({
 // 模拟留言数据
 const messages = ref([
   {
-    name: '浩某',
+    name: '肖某',
     date: '2025-06-15 14:30',
     content: '博客内容很丰富，学到了很多知识，特别是关于Vue 3的那篇文章，解决了我项目中的一个难题，感谢分享！',
     reply: '谢谢支持，很高兴能帮到你！后续会继续更新Vue相关的内容。',
     replyDate: '2025-06-15 18:45'
   },
   {
-    name: '李四',
+    name: '李某',
     date: '2025-06-10 09:15',
     content: '博主的文章写得很详细，代码示例也很清晰。希望能多写一些关于React Hooks的文章。',
     reply: null,
     replyDate: null
   },
   {
-    name: '王五',
+    name: '王某',
     date: '2025-06-05 21:20',
     content: '偶然发现这个博客，界面设计很漂亮，内容也很专业。已经收藏了，期待更多优质内容！',
     reply: '感谢您的支持和鼓励！我会继续努力创作更多有价值的内容。',
