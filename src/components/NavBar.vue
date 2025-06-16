@@ -1,5 +1,8 @@
 <template>
-  <nav class="fixed top-0 left-0 right-0 w-full z-[9999999] bg-gray-900/95 backdrop-blur-md border-b border-gray-800 shadow-lg">
+  <nav 
+    class="fixed top-0 left-0 right-0 w-full z-[9999999] bg-gray-900/95 backdrop-blur-md border-b border-gray-800 shadow-lg fade-in-element"
+    :class="{'visible': navVisible}"
+  >
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         <!-- Logo (靠左) -->
@@ -149,7 +152,7 @@
 </template>
 
 <script setup>
-import { ref, nextTick, onMounted, onBeforeUnmount } from 'vue'
+import { ref, nextTick, onMounted, onBeforeUnmount, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 
 const route = useRoute()
@@ -158,6 +161,7 @@ const isOpen = ref(false)
 const searchVisible = ref(false)
 const searchQuery = ref('')
 const searchInput = ref(null)
+const navVisible = ref(false)
 
 const navItems = [
   { name: '首页', path: '/' },
@@ -167,6 +171,23 @@ const navItems = [
   { name: '个人资料', path: '/about' },
   { name: '留言板', path: '/message' }
 ]
+
+// 触发导航栏动画效果
+const triggerNavAnimation = () => {
+  // 先隐藏导航栏
+  navVisible.value = false
+  
+  // 确保页面滚动到顶部
+  window.scrollTo({
+    top: 0,
+    behavior: 'instant' // 使用instant而不是smooth，避免滚动动画与淡入动画冲突
+  })
+  
+  // 延迟一小段时间后再显示，以确保动画效果被触发
+  setTimeout(() => {
+    navVisible.value = true
+  }, 500)
+}
 
 // 搜索相关功能
 const handleSearchClick = () => {
@@ -202,9 +223,27 @@ const handleEscKey = (event) => {
   }
 }
 
+// 监听路由变化，当导航到首页时触发动画
+watch(
+  () => route.path,
+  (newPath) => {
+    if (newPath === '/') {
+      triggerNavAnimation()
+    }
+  }
+)
+
 // 组件生命周期钩子 - 确保事件监听器的添加和移除
 onMounted(() => {
   document.addEventListener('keydown', handleEscKey)
+  
+  // 初始加载时，如果是首页则触发动画
+  if (route.path === '/') {
+    triggerNavAnimation()
+  } else {
+    // 如果不是首页，则直接显示导航栏
+    navVisible.value = true
+  }
 })
 
 onBeforeUnmount(() => {
@@ -238,5 +277,17 @@ const isRouteActive = (path) => {
 
 .opacity-0 {
   opacity: 0;
+}
+
+/* 导航栏淡入效果 */
+.fade-in-element {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-element.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 </style> 

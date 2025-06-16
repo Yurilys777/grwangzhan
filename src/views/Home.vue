@@ -17,17 +17,28 @@
       <div class="relative container mx-auto px-4 sm:px-6 lg:px-8 z-10">
         <div class="text-center max-w-4xl mx-auto">
           <h1 class="text-5xl md:text-7xl font-bold mb-8">
-            <span class="inline-block text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 animate-text-shimmer">
+            <span 
+              class="inline-block text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 animate-text-shimmer fade-in-element" 
+              :class="{'visible': contentVisible}"
+            >
               浩某的博客空间
             </span>
           </h1>
           
-          <p class="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed">
+          <p 
+            class="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed fade-in-element" 
+            :class="{'visible': contentVisible}" 
+            style="transition-delay: 100ms;"
+          >
             分享<span class="text-emerald-400 font-semibold">技术见解</span>、生活感悟和随手记录
             <br>记录成长，分享知识
           </p>
           
-          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div 
+            class="flex flex-col sm:flex-row items-center justify-center gap-4 fade-in-element" 
+            :class="{'visible': contentVisible}"
+            style="transition-delay: 200ms;"
+          >
             <router-link to="/tech" 
               class="group relative px-8 py-4 text-lg font-medium rounded-lg overflow-hidden bg-gradient-to-r from-emerald-500 to-teal-500 text-white transform hover:scale-105 transition-all duration-300">
               <div class="absolute inset-0 bg-white/20 group-hover:bg-white/30 transition-colors duration-300"></div>
@@ -333,6 +344,17 @@
 </template>
 
 <script setup>
+import { ref, onMounted } from 'vue';
+
+// 控制内容是否可见
+const contentVisible = ref(false);
+
+onMounted(() => {
+  // 延迟500毫秒后显示内容
+  setTimeout(() => {
+    contentVisible.value = true;
+  }, 500);
+});
 </script>
 
 <style scoped>
@@ -350,5 +372,17 @@
   right: 0;
   bottom: 0;
   left: 0;
+}
+
+/* 淡入效果 */
+.fade-in-element {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-element.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 </style> 

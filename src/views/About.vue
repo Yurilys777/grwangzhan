@@ -174,10 +174,10 @@
               <div class="relative pl-8">
                 <div class="absolute w-4 h-4 bg-indigo-500 rounded-full -left-2 mt-1"></div>
                 <div class="flex items-center justify-between">
-                  <h3 class="text-lg font-semibold">学校小程序开发实习生</h3>
+                  <h3 class="text-lg font-semibold">校园小程序开发实习生</h3>
                   <span class="text-xs text-gray-400">2024 - 2024</span>
                 </div>
-                <p class="text-indigo-400 text-sm mb-2">创新科技初创公司</p>
+                <p class="text-indigo-400 text-sm mb-2">校园数据中心</p>
                 <p class="text-gray-400 text-sm">参与学校小程序和官网的前端开发，学习和应用前端技术栈，快速成长为团队核心成员。</p>
               </div>
             </div>
