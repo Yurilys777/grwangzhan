@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>博客图标</title>
+    <defs>
+        <!-- 创建绿蓝渐变色背景 -->
+        <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#43cea2;stop-opacity:1">
+                <animate attributeName="stop-color" values="#43cea2; #185a9d; #43cea2" dur="8s" repeatCount="indefinite" />
+            </stop>
+            <stop offset="100%" style="stop-color:#185a9d;stop-opacity:1">
+                <animate attributeName="stop-color" values="#185a9d; #43cea2; #185a9d" dur="8s" repeatCount="indefinite" />
+            </stop>
+        </linearGradient>
+        
+        <!-- 创建光晕效果 -->
+        <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="1.5" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+    </defs>
+    
+    <!-- 长方形背景 -->
+    <rect x="4" y="2" width="24" height="28" rx="6" fill="url(#bgGradient)">
+        <animate attributeName="rx" values="6;7;6" dur="4s" repeatCount="indefinite" />
+    </rect>
+    
+    <!-- 装饰元素 -->
+    <circle fill="#FFFFFF" fill-opacity="0.15" cx="10" cy="8" r="2">
+        <animate attributeName="fill-opacity" values="0.15;0.3;0.15" dur="4s" repeatCount="indefinite" />
+    </circle>
+    <circle fill="#FFFFFF" fill-opacity="0.1" cx="22" cy="24" r="3">
+        <animate attributeName="fill-opacity" values="0.1;0.2;0.1" dur="5s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- 波浪装饰 -->
+    <path d="M8,22 Q12,18 16,22 T24,22" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="1" fill="none">
+        <animate attributeName="d" values="M8,22 Q12,18 16,22 T24,22; M8,22 Q12,20 16,22 T24,20; M8,22 Q12,18 16,22 T24,22" dur="6s" repeatCount="indefinite" />
+    </path>
+    
+    <!-- 白色透明爱心 -->
+    <g filter="url(#glow)" transform="translate(16,16) scale(0.5) translate(-16,-16)">
+        <path d="M16,28 C16,28 3,20 3,11 C3,7 6,4 10,4 C12.5,4 14.5,5.5 16,7.5 C17.5,5.5 19.5,4 22,4 C26,4 29,7 29,11 C29,20 16,28 16,28 Z" fill="#FFFFFF" fill-opacity="0.85">
+            <animate attributeName="d" values="M16,28 C16,28 3,20 3,11 C3,7 6,4 10,4 C12.5,4 14.5,5.5 16,7.5 C17.5,5.5 19.5,4 22,4 C26,4 29,7 29,11 C29,20 16,28 16,28 Z; M16,27 C16,27 4,19 4,11 C4,7.5 6.5,4.5 10,4.5 C12.5,4.5 14.5,6 16,8 C17.5,6 19.5,4.5 22,4.5 C25.5,4.5 28,7.5 28,11 C28,19 16,27 16,27 Z; M16,28 C16,28 3,20 3,11 C3,7 6,4 10,4 C12.5,4 14.5,5.5 16,7.5 C17.5,5.5 19.5,4 22,4 C26,4 29,7 29,11 C29,20 16,28 16,28 Z" dur="4s" repeatCount="indefinite" />
+            <animate attributeName="fill-opacity" values="0.85;0.7;0.85" dur="2s" repeatCount="indefinite" />
+        </path>
+    </g>
+    
+    <!-- 装饰小光点 -->
+    <circle cx="9" cy="7" r="0.8" fill="#FFFFFF" fill-opacity="0.7">
+        <animate attributeName="fill-opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="23" cy="9" r="0.6" fill="#FFFFFF" fill-opacity="0.6">
+        <animate attributeName="fill-opacity" values="0.6;0.9;0.6" dur="2.5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="22" cy="24" r="0.7" fill="#FFFFFF" fill-opacity="0.5">
+        <animate attributeName="fill-opacity" values="0.5;0.8;0.5" dur="3.5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="9" cy="22" r="0.5" fill="#FFFFFF" fill-opacity="0.6">
+        <animate attributeName="fill-opacity" values="0.6;0.9;0.6" dur="4s" repeatCount="indefinite" />
+    </circle>
+</svg> 
